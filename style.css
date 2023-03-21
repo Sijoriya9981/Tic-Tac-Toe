@@ -1,0 +1,126 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.players{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  border: 2px solid rgb(0, 81, 255);
+
+}
+.players div 
+{
+    padding:  10px 15px ;
+    border-radius: 15px;
+}
+.players div.active
+{
+  background-color: rgb(81, 0, 255);
+  color: rgb(255, 255, 255);
+}
+
+.gameboard
+{
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+.cell
+{
+  height: 100px;
+  width: 100px;
+  border: 2px solid rgb(2, 2, 249);
+  font-size: 5.2rem ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+
+}
+.cell:nth-child(1) ,.cell:nth-child(3),.cell:nth-child(2)
+{
+  border-top: none;
+}
+
+.cell:nth-child(3)
+{
+  border-right: none;
+}
+.cell:nth-child(4),.cell:nth-child(1),.cell:nth-child(7)
+{
+  border-left: none;
+}
+.cell:nth-child(6),cell:nth-child(3),.cell:nth-child(9)
+{
+  border-right: none;
+}
+.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9)
+{
+  border-bottom: none;
+}
+
+.cell.X
+{
+color: rgb(255, 234, 0);
+}
+.cell.O{
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+.result
+{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgb(196, 196, 196);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result h1{
+  color: white;
+  font-size: 1rem;
+  background-color: aqua;
+  padding: 12px 15px;
+
+}
+.result button{
+  font-size: 1rem;
+  background-color: blueviolet;
+  color:white;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px 14px;
+}
+
+.inactive
+{
+  display: none;
+}
+.disabled
+{
+  pointer-events: none;
+}
